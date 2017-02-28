@@ -1,0 +1,60 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="dataFeedSelected row">
+            <input type="radio" name="radio" value="1">Klik 1
+            <input type="radio" name="radio" value="2">Klik 2
+            <input type="radio" name="radio" value="3">Klik 3
+            <input type="radio" name="radio" value="4">Klik 4
+        </div>
+
+        <div id="Cars1" class="desc" class="button1">
+            <input type="button" value="azwar1" id="tombol1">
+        </div>
+         <div id="Cars2" class="desc" class="button2">
+            <input type="button" value="azwar2" id="tombol2">
+        </div>
+         <div id="Cars3" class="desc" class="button3">
+            <input type="button" value="azwar3" id="tombol3">
+        </div>
+         <div  id="Cars4" class="desc" class="button4">
+            <input type="button" value="azwar4" id="tombol4">
+        </div>
+
+        <!-- VENDOR SCRIPT -->
+        <script src="vendor/jquery/dist/jquery.min.js"></script>
+        <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+        <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendor/jquery-flot/jquery.flot.js"></script>
+        <script src="vendor/jquery-flot/jquery.flot.resize.js"></script>
+        <script src="vendor/jquery-flot/jquery.flot.pie.js"></script>
+        <script src="vendor/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendor/jquery.flot.spline/index.js"></script>
+        <script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
+        <script src="vendor/iCheck/icheck.min.js"></script>
+        <script src="vendor/peity/jquery.peity.min.js"></script>
+        <script src="vendor/sparkline/index.js"></script>
+        <script src="vendor/select2-3.5.2/select2.min.js"></script>
+        <script src="vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+        <script src="vendor/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+
+        <!-- APP SCRIPT -->
+        <script src="scripts/homer.js"></script>
+        <script src="scripts/charts.js"></script>
+
+        <script>
+          $('.desc').hide(); 
+                $(document).ready(function() {
+                    $("input[name$='radio']").click(function() {
+                            var test = $(this).val();
+
+                             $("div.desc").hide();
+                             $("#Cars" + test).show();
+                    });
+                });
+        </script>
+
+    </body>
+</html>
